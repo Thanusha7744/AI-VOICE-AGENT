@@ -54,26 +54,22 @@ The AI Voice Agent can:
 
 ## 📂 Folder Structure
 
-voice-agent/
-│
-├── backend/
-│ ├── main.py # FastAPI backend with endpoints
-│ ├── requirements.txt # Python dependencies
-│ ├── .env # API keys (ignored in GitHub)
-│ ├── uploads/ # Temporary audio storage
-│ └── utils/
-│ ├── tts_service.py # Murf API TTS logic
-│ ├── stt_service.py # AssemblyAI STT logic
-│ ├── llm_service.py # Gemini API logic
-│ └── chat_history.py # Conversation memory logic
-│
-├── frontend/
-│ ├── index.html # Main UI
-│ ├── script.js # Recording & API interaction
-│ ├── styles.css # UI styling
-│
-├── README.md # Documentation
-└── .gitignore # Ignore sensitive files
+AI AGENT/
+├── pycache/ # Python cache files
+├── outputs/ # Generated audio or result files
+├── static/ # Frontend static assets
+│ ├── response.mp3
+│ ├── script.js
+│ └── style.css
+├── templates/ # HTML templates
+│ └── index.html
+├── uploads/ # Uploaded files from user
+├── venv/ # Virtual environment (ignored in git)
+├── .env # Environment variables (ignored in git)
+├── .gitignore # Git ignore file
+├── main.py # Main backend application
+├── README.md # Project documentation
+└── requirements.txt # Python dependencies
 
 
 
