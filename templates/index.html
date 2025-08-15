@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Voice Suite</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">AI Voice Suite</div>
+        <div class="subtitle">Voice • Echo • Gemini</div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-btn active" data-section="voiceAssistant"><i class="fas fa-microphone-alt"></i><span>Voice Assistant</span></button>
+        <button class="nav-btn" data-section="echoBot"><i class="fas fa-exchange-alt"></i><span>EchoBot</span></button>
+        <button class="nav-btn" data-section="gemini"><i class="fas fa-star"></i><span>Gemini AI</span></button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <small>Built with ❤️</small>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <!-- Voice Assistant -->
+      <section id="voiceAssistant" class="section active">
+        <h1>Voice Assistant</h1>
+        <p class="muted">Type text below and get a MURF-AI spoken response.</p>
+        <textarea id="textInput" rows="4" placeholder="Type your message here..."></textarea>
+        <div class="controls">
+          <button id="generateBtn" class="btn primary">🔊 Generate Voice</button>
+          <span id="statusText" class="status">Waiting for input…</span>
+        </div>
+        <audio id="audioPlayer" controls style="display:none;"></audio>
+      </section>
+
+      <!-- EchoBot -->
+      <section id="echoBot" class="section">
+        <h1>EchoBot</h1>
+        <p class="muted">Record voice, ask questions, and the bot will reply.</p>
+
+        <div class="record-controls">
+          <button id="startRecordBtn" class="btn">🎙️ Start Recording</button>
+          <button id="stopRecordBtn" class="btn danger" disabled>⏹️ Stop Recording</button>
+        </div>
+
+        <div id="transcriptionText" class="response-box">Transcript will appear here...</div>
+        <audio id="murfAudio" controls style="display:none;"></audio>
+      </section>
+
+      <!-- Gemini AI -->
+      <section id="gemini" class="section">
+        <h1>Gemini AI</h1>
+        <p class="muted">Record your question — Gemini will answer.</p>
+
+        <div class="record-controls">
+          <button id="gemini-start" class="btn">🎙️ Start Recording</button>
+          <button id="gemini-stop" class="btn danger" disabled>⏹️ Stop Recording</button>
+        </div>
+
+        <div id="gemini-transcript" class="response-box">Transcript will appear here...</div>
+        <div id="gemini-reply" class="response-box">Answer will appear here...</div>
+        <audio id="geminiAudio" controls style="display:none;"></audio>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

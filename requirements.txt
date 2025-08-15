@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+gTTS
+SpeechRecognition
+pydub
+python-multipart
+assemblyai
+jinja2
